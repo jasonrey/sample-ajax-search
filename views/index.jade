@@ -24,3 +24,36 @@ html
                         .search-loader.search-bounds
                             img(src="images/loader.gif")
                         ul.search-result.search-bounds
+
+            .panel.panel-default
+                .panel-heading
+                    h2 HTML Block
+                .panel-body
+                    pre
+                        = '<form '
+                        strong= 'id="search"'
+                        = '>'
+                        br
+                        = '    <input type="text" '
+                        strong= 'class="search-bounds"'
+                        = '/>'
+                        br
+                        = '    <div '
+                        strong= 'class="search-loader search-bounds"'
+                        = '>'
+                        br
+                        = '        <img src="images/loader.gif" />'
+                        br
+                        = '    </div>'
+                        br
+                        = '    <ul '
+                        strong= 'class="search-result search-bounds"'
+                        = '>'
+                        br
+                        = '        <li '
+                        strong= 'class="search-result-item search-bounds"'
+                        = '></li>'
+                        br
+                        = '    </ul>'
+                        br
+                        = '</form>'
