@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title Playground
+        title Ajax Search
         link(rel="stylesheet", href="css/bootstrap.min.css")
         script(type="text/javascript", src="js/jquery.min.js")
 
@@ -13,4 +13,14 @@ html
     body
         .container
             .jumbotron
-                h1.title Playground
+                h1.title Ajax Search
+
+            .panel.panel-primary
+                .panel-heading
+                    h2 Mechanics
+                .panel-body
+                    form#search
+                        input.search-bounds(type="text")
+                        .search-loader.search-bounds
+                            img(src="images/loader.gif")
+                        ul.search-result.search-bounds
