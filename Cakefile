@@ -8,6 +8,7 @@ publicFolders = [
     "public/js"
     "public/css"
     "public/api"
+    "public/images"
 ]
 
 libraries =
