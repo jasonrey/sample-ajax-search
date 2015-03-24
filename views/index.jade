@@ -19,11 +19,12 @@ html
                 .panel-heading
                     h2 Mechanics
                 .panel-body
-                    form#search
+                    form#search(action="")
                         input.search-bounds(type="text")
                         .search-loader.search-bounds
                             img(src="images/loader.gif")
                         ul.search-result.search-bounds
+                            li.search-result-item
 
             .panel.panel-default
                 .panel-heading
@@ -32,6 +33,8 @@ html
                     pre
                         = '<form '
                         strong= 'id="search"'
+                        = " "
+                        strong= 'action="(action)"'
                         = '>'
                         br
                         = '    <input type="text" '
@@ -51,9 +54,62 @@ html
                         = '>'
                         br
                         = '        <li '
-                        strong= 'class="search-result-item search-bounds"'
+                        strong= 'class="search-result-item"'
                         = '></li>'
                         br
                         = '    </ul>'
                         br
                         = '</form>'
+
+            .panel.panel-default
+                .panel-heading
+                    h2 CSS Selectors
+                .panel-body
+                    h3
+                        = "Search "
+                        code= "#search"
+                    pre= '<form id="search"></form>'
+
+                    h3
+                        = "Search Bounds "
+                        code= "#search .search-bounds"
+                    .alert.alert-warning This class is only used on JavaScript to identify the area for clicks to be identified as still in the area of search. No styling is required for this but the class has to be applied according to the HTML block.
+                    pre= '<* class="search-bounds"></*>'
+
+                    h3
+                        = "Search Input "
+                        code= "#search input"
+                    pre= '<input type="text" class="search-bounds" />'
+
+                    h3= "Search Loader"
+                    h4
+                        = "Template Block "
+                        code= "#search .search-loader"
+                    .alert.alert-warning The DOM in the form is only a template block for JavaScript to clone. This should be styled as display: none. The actual one to style will be appended to body.
+                    h4
+                        = "Actual Block "
+                        code= "body .search-loader"
+                    .alert.alert-warning This is the actual block and selector to style.
+                    pre= '<div class="search-loader search-bounds"></div>'
+
+                    h3= "Search Result"
+                    h4
+                        = "Template Block "
+                        code= "#search .search-result"
+                    .alert.alert-warning The DOM in the form is only a template block for JavaScript to clone. This should be styled as display: none. The actual one to style will be appended to body.
+                    h4
+                        = "Actual Block "
+                        code= "body .search-result"
+                    .alert.alert-warning This is the actual block and selector to style.
+                    pre= '<ul/div class="search-result search-bounds"></ul/div>'
+
+                    h3= "Search Result Item"
+                    h4
+                        = "Template Block "
+                        code= "#search .search-result .search-result-item"
+                    .alert.alert-warning The DOM in the form is only a template block for JavaScript to clone. This should be styled as display: none. The actual one to style will be appended to body.
+                    h4
+                        = "Actual Block "
+                        code= "body .search-result .search-result-item"
+                    .alert.alert-warning This is the actual block and selector to style.
+                    pre= '<li/div class="search-result-item"></li/div>'

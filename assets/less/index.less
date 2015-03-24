@@ -50,11 +50,20 @@ body {
 
     .search-result {
         position: absolute;
-        padding: 10px;
+        padding: 0;
         border: 1px solid #e1e1e8;
         background-color: #fff;
         border-radius: 4px;
         border-top-width: 10px;
         list-style-type: none;
+
+        .search-result-item {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e1e1e8;
+            }
+        }
     }
 }
